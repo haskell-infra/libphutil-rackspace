@@ -9,14 +9,14 @@
 phutil_register_library_map(array(
   '__library_version__' => 2,
   'class' => array(
-    'PhabricatorFilesConfigOptions' => 'extensions/files/config/PhabricatorFilesConfigOptions.php',
     'PhabricatorRackspaceConfigOptions' => 'extensions/config/option/PhabricatorRackspaceConfigOptions.php',
     'PhabricatorRackspaceFileStorageEngine' => 'extensions/files/engine/PhabricatorRackspaceFileStorageEngine.php',
+    'PhabricatorRackspaceFilesConfigOptions' => 'extensions/files/config/PhabricatorRackspaceFilesConfigOptions.php',
   ),
   'function' => array(),
   'xmap' => array(
-    'PhabricatorFilesConfigOptions' => 'PhabricatorApplicationConfigOptions',
     'PhabricatorRackspaceConfigOptions' => 'PhabricatorApplicationConfigOptions',
     'PhabricatorRackspaceFileStorageEngine' => 'PhabricatorFileStorageEngine',
+    'PhabricatorRackspaceFilesConfigOptions' => 'PhabricatorApplicationConfigOptions',
   ),
 ));
