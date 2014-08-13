@@ -13,6 +13,14 @@ final class PhabricatorRackspaceConfigOptions
 
   public function getOptions() {
     return array(
+      /* -- Rackspace server options. -- */
+      $this->newOption('rackspace-cloud.username', 'string', null)
+        ->setLocked(true)
+        ->setDescription(pht('Rackspace username for Cloud Server instances.')),
+      $this->newOption('rackspace-cloud.api-key', 'string', null)
+        ->setMasked(true)
+        ->setDescription(pht('API key for Cloud Servers user.')),
+
       /* -- Rackspace storage options. -- */
       $this->newOption('rackspace-files.username', 'string', null)
         ->setLocked(true)
