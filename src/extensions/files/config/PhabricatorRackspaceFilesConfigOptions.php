@@ -7,6 +7,10 @@ final class PhabricatorRackspaceFilesConfigOptions
     return pht('Files');
   }
 
+  public function getDescription() {
+    return pht('Configure Rackspace information and file storage.');
+  }
+
   public function getOptions() {
 
     return array(
