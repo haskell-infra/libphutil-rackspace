@@ -14,24 +14,24 @@ final class PhabricatorRackspaceConfigOptions
   public function getOptions() {
     return array(
       /* -- Rackspace storage options. -- */
-      $this->newOption('rackspace.storage.username', 'string', null)
+      $this->newOption('rackspace-files.username', 'string', null)
         ->setLocked(true)
         ->setDescription(pht('Rackspace username for Cloud Files storage.')),
-      $this->newOption('rackspace.storage.api-key', 'string', null)
+      $this->newOption('rackspace-files.api-key', 'string', null)
         ->setMasked(true)
         ->setDescription(pht('API key for Cloud Files user.')),
-      $this->newOption('rackspace.storage.logging', 'bool', false)
+      $this->newOption('rackspace-files.logging', 'bool', false)
         ->setDescription(pht(
           'Set this to true to enable access logs for all data that the file '.
           'objects acrue.')),
-      $this->newOption('rackspace.storage.container', 'string', null)
+      $this->newOption('rackspace-files.container', 'string', null)
          ->setSummary(pht('Cloud Files container for file storage.'))
          ->setDescription(
            pht(
              'Set this to a valid Rackspace Files container to store files '.
              'in. You must also configure the Rackspace access keys, '.
              'and the region to store the files in.')),
-      $this->newOption('rackspace.storage.region', 'enum', null)
+      $this->newOption('rackspace-files.region', 'enum', null)
          ->setEnumOptions(
            array(
              'IAD' => 'Northern Virginia (IAD)',
