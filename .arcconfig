@@ -1,0 +1,7 @@
+{
+  "project.name"        : "libphutil-rackspace",
+  "repository.callsign" : "PHUR",
+  "phabricator.uri"     : "https://phabricator.haskell.org",
+
+  "load": [ "phabricator/src" ]
+}
