@@ -4,7 +4,7 @@ final class PhabricatorRackspaceConfigOptions
   extends PhabricatorApplicationConfigOptions {
 
   public function getName() {
-    return pht('Rackspace Cloud');
+    return pht('Rackspace');
   }
 
   public function getDescription() {
