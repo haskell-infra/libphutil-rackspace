@@ -15,21 +15,21 @@ final class PhabricatorRackspaceConfigOptions
     return array(
       $this->newOption('rackspace-files.username', 'string', null)
         ->setLocked(true)
-        ->setDescription(pht('Rackspace username.')),
+        ->setDescription(pht('Rackspace login username.')),
       $this->newOption('rackspace-files.api-key', 'string', null)
         ->setMasked(true)
-        ->setDescription(pht('API key for Rackspace.')),
+        ->setDescription(pht('API key for specified user.')),
       $this->newOption('rackspace-files.logging', 'bool', false)
         ->setDescription(pht(
           'Set this to true to enable access logs for all data that the file '.
           'objects acrue.')),
       $this->newOption('storage.rackspace.container', 'string', null)
-         ->setSummary(pht('Rackspace Files container.'))
+         ->setSummary(pht('Cloud Files container for file storage.'))
          ->setDescription(
            pht(
              "Set this to a valid Rackspace Files container to store files ".
              "there. You must also configure the Rackspace access keys in the ".
-             "'Rackspace Cloud' group, and the region to store the files in.")),
+             "'Rackspace' group, and the region to store the files in.")),
       $this->newOption('storage.rackspace.region', 'enum', null)
          ->setEnumOptions(
            array(
@@ -40,7 +40,7 @@ final class PhabricatorRackspaceConfigOptions
              'LON' => 'London (LON)',
              'HKG' => 'Hong Kong (HKG)',
            ))
-         ->setSummary(pht('Rackspace Files region.'))
+         ->setSummary(pht('Cloud Files region.'))
          ->setDescription(
            pht(
              "Set this to a valid Rackspace region, which specifies which ".
