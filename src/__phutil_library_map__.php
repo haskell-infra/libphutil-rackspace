@@ -11,12 +11,10 @@ phutil_register_library_map(array(
   'class' => array(
     'PhabricatorRackspaceConfigOptions' => 'extensions/config/option/PhabricatorRackspaceConfigOptions.php',
     'PhabricatorRackspaceFileStorageEngine' => 'extensions/files/engine/PhabricatorRackspaceFileStorageEngine.php',
-    'PhabricatorRackspaceFilesConfigOptions' => 'extensions/files/config/PhabricatorRackspaceFilesConfigOptions.php',
   ),
   'function' => array(),
   'xmap' => array(
     'PhabricatorRackspaceConfigOptions' => 'PhabricatorApplicationConfigOptions',
     'PhabricatorRackspaceFileStorageEngine' => 'PhabricatorFileStorageEngine',
-    'PhabricatorRackspaceFilesConfigOptions' => 'PhabricatorApplicationConfigOptions',
   ),
 ));
