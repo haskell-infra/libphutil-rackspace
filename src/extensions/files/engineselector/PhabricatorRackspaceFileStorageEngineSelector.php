@@ -30,10 +30,10 @@ final class PhabricatorRackspaceFileStorageEngineSelector
     }
 
     /* -- Select Rackspace before S3 -- */
-    $rackspace_key       = 'storage.rackspace.container';
+    $rackspace_key       = 'rackspace-files.container';
     $rackspace_container = PhabricatorEnv::getEnvConfig($rackspace_key);
 
-    $rackspace_key    = 'storage.rackspace.region';
+    $rackspace_key    = 'rackspace-files.region';
     $rackspace_region = PhabricatorEnv::getEnvConfig($rackspace_key);
 
     if ($rackspace_container && $rackspace_region) {
