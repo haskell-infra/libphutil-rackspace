@@ -92,6 +92,8 @@ final class PhabricatorRackspaceFileStorageEngine
   private function getEndpoint() {
     $region = $this->getRegion();
 
+    // The London region has a different authentication endpoint (and
+    // a different everything, presumably due to laws and stuff)
     if ($region === 'LON') {
       return 'https://lon.identity.api.rackspacecloud.com/v2.0/';
     } else {
