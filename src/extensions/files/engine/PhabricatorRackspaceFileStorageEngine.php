@@ -15,7 +15,7 @@ final class PhabricatorRackspaceFileStorageEngine
    * This engine identifies as `rackspace-files`.
    */
   public function getEngineIdentifier() {
-    return 'rackspace-files';
+    return 'rackspace';
   }
 
   /**
@@ -34,7 +34,7 @@ final class PhabricatorRackspaceFileStorageEngine
       substr($seed, 2, 2),
       substr($seed, 4),
     );
-    $name = 'phabricator/file/'.implode('/', $parts);
+    $name = 'phabricator-files/'.implode('/', $parts);
 
     AphrontWriteGuard::willWrite();
     $container->uploadObject($name, $data);
