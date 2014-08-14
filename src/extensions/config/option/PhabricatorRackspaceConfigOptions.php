@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Adds a section on the 'Config' application for configuring
+ * Rackspace-related options.
+ */
 final class PhabricatorRackspaceConfigOptions
   extends PhabricatorApplicationConfigOptions {
 

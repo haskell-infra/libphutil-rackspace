@@ -9,9 +9,7 @@
 final class PhabricatorRackspaceFileStorageEngine
   extends PhabricatorFileStorageEngine {
 
-
 /* -(  Implementation  )----------------------------------------------------- */
-
 
   /**
    * This engine identifies as `rackspace-files`.
@@ -19,7 +17,6 @@ final class PhabricatorRackspaceFileStorageEngine
   public function getEngineIdentifier() {
     return 'rackspace-files';
   }
-
 
   /**
    * Writes file data into Rackspace Cloud Files.
@@ -62,7 +59,6 @@ final class PhabricatorRackspaceFileStorageEngine
     return $body;
   }
 
-
   /**
    * Delete a blob from Rackspace Cloud Files.
    */
@@ -70,7 +66,6 @@ final class PhabricatorRackspaceFileStorageEngine
     AphrontWriteGuard::willWrite();
     $this->newCloudFilesAPI()->getObject($handle)->delete();
   }
-
 
 /* -(  Internals  )---------------------------------------------------------- */
 
@@ -80,10 +75,10 @@ final class PhabricatorRackspaceFileStorageEngine
    * @task internal
    */
   private function getRegion() {
-    $region = PhabricatorEnv::getEnvConfig('storage.rackspace.region');
+    $region = PhabricatorEnv::getEnvConfig('rackspace-files.region');
     if (!$region) {
       throw new PhabricatorFileStorageConfigurationException(
-        "No 'storage.rackspace.region' specified!");
+        "No 'rackspace-files.region' specified!");
     }
 
     return $region;
@@ -111,10 +106,10 @@ final class PhabricatorRackspaceFileStorageEngine
    */
   private function getContainer($rax) {
     $region = $this->getRegion();
-    $container = PhabricatorEnv::getEnvConfig('storage.rackspace.container');
+    $container = PhabricatorEnv::getEnvConfig('rackspace-files.container');
     if (!$container) {
       throw new PhabricatorFileStorageConfigurationException(
-        "No 'storage.rackspace.container' specified!");
+        "No 'rackspace-files.container' specified!");
     }
 
     $obj = $rax->objectStoreService(null, $region)->getContainer($container);
@@ -155,5 +150,4 @@ final class PhabricatorRackspaceFileStorageEngine
 
     return $container;
   }
-
 }
