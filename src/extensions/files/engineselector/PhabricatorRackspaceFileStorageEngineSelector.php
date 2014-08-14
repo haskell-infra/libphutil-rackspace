@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Rackspace storage engine selector, which defaults to Rackspace after the MySQL
- * storage limit has been reached.
+ * Rackspace storage engine selector, which defaults to Rackspace
+ * after the MySQL storage limit has been reached.
  */
 final class PhabricatorRackspaceFileStorageEngineSelector
   extends PhabricatorFileStorageEngineSelector {

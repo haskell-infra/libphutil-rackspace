@@ -93,9 +93,9 @@ final class PhabricatorRackspaceFileStorageEngine
     $region = $this->getRegion();
 
     if ($region === 'LON') {
-      return "https://lon.identity.api.rackspacecloud.com/v2.0/";
+      return 'https://lon.identity.api.rackspacecloud.com/v2.0/';
     } else {
-      return "https://identity.api.rackspacecloud.com/v2.0/";
+      return 'https://identity.api.rackspacecloud.com/v2.0/';
     }
   }
 
