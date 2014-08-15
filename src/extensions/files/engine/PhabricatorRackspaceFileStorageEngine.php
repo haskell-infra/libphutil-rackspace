@@ -34,7 +34,7 @@ final class PhabricatorRackspaceFileStorageEngine
       substr($seed, 2, 2),
       substr($seed, 4),
     );
-    $name = 'phabricator-files/'.implode('/', $parts);
+    $name = 'phabricator/'.implode('/', $parts);
 
     AphrontWriteGuard::willWrite();
     $container->uploadObject($name, $data);
