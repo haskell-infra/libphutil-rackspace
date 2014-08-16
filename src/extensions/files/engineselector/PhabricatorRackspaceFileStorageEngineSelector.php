@@ -1,15 +1,12 @@
 <?php
 
 /**
- * Rackspace storage engine selector, which defaults to Rackspace
- * after the MySQL storage limit has been reached.
+ * Rackspace storage engine selector, which defaults to Rackspace and errors if
+ * it's not properly configured.
  */
 final class PhabricatorRackspaceFileStorageEngineSelector
   extends PhabricatorFileStorageEngineSelector {
 
-  /**
-   * Select viable default storage engine.
-   */
   public function selectStorageEngines($data, array $params) {
     $engines = array();
 
