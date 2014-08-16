@@ -12,7 +12,7 @@ final class PhabricatorRackspaceFileStorageEngine
 /* -(  Implementation  )----------------------------------------------------- */
 
   /**
-   * This engine identifies as `rackspace-files`.
+   * This engine identifies as `rackspace`.
    */
   public function getEngineIdentifier() {
     return 'rackspace';
@@ -153,3 +153,10 @@ final class PhabricatorRackspaceFileStorageEngine
     return $container;
   }
 }
+
+// Local Variables:
+// fill-column: 80
+// indent-tabs-mode: nil
+// c-basic-offset: 2
+// buffer-file-coding-system: utf-8-unix
+// End:
