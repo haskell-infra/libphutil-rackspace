@@ -9,12 +9,14 @@
 phutil_register_library_map(array(
   '__library_version__' => 2,
   'class' => array(
+    'DrydockRackspaceBlueprintImplementation' => 'extensions/drydock/blueprint/DrydockRackspaceBlueprintImplementation.php',
     'PhabricatorRackspaceConfigOptions' => 'extensions/config/option/PhabricatorRackspaceConfigOptions.php',
     'PhabricatorRackspaceFileStorageEngine' => 'extensions/files/engine/PhabricatorRackspaceFileStorageEngine.php',
     'PhabricatorRackspaceFileStorageEngineSelector' => 'extensions/files/engineselector/PhabricatorRackspaceFileStorageEngineSelector.php',
   ),
   'function' => array(),
   'xmap' => array(
+    'DrydockRackspaceBlueprintImplementation' => 'DrydockBlueprintImplementation',
     'PhabricatorRackspaceConfigOptions' => 'PhabricatorApplicationConfigOptions',
     'PhabricatorRackspaceFileStorageEngine' => 'PhabricatorFileStorageEngine',
     'PhabricatorRackspaceFileStorageEngineSelector' => 'PhabricatorFileStorageEngineSelector',
